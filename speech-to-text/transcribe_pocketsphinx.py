@@ -8,7 +8,8 @@ import speech_recognition as sr
 
 from pocketsphinx import AudioFile
 
-
+# Transcribes audio from .wav file
+# RETURNS A LIST
 def transcribe_audio(audio_file=None):
     if audio_file == None:
         print("Invalid Param, Terminating...")
@@ -32,8 +33,9 @@ def transcribe_audio(audio_file=None):
     print("\n")
     print(wordsList)
     # print("predicted loacation of start ", float(wordsList.index("the")) * 0.3)
+
+    return wordsList
     
 
-if __name__ == "__main__":
-    transcribe_audio("sample1.wav")
-    # transcribe_audio("Post_Malone_Goodbyes.wav")
+# if __name__ == "__main__":
+#     transcribe_audio("sample1.wav")
